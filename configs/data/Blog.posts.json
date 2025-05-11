@@ -1,0 +1,117 @@
+[{
+  "_id": {
+    "$oid": "681fdc4184bd9c846a06d7db"
+  },
+  "title": "Agenda",
+  "description": "agenda web desarrollada con html",
+  "category": "Proyecto",
+  "course": "Practica Supervisada",
+  "img": "https://res.cloudinary.com/dcczhqfbn/image/upload/v1746918464/img/agenda-1746918463754.png",
+  "status": true,
+  "comments": [
+    {
+      "user": "jose",
+      "comment": "No me gusto",
+      "_id": {
+        "$oid": "681fdd4b84bd9c846a06d7de"
+      },
+      "date": {
+        "$date": "2025-05-10T23:12:11.235Z"
+      }
+    },
+    {
+      "user": "anonimo",
+      "comment": "hola",
+      "_id": {
+        "$oid": "68211c00bce5de91572eba2f"
+      },
+      "date": {
+        "$date": "2025-05-11T21:52:00.786Z"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2025-05-10T23:07:45.519Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-11T22:03:22.173Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6820cb1a132ed8532c293357"
+  },
+  "title": "Tienda Online",
+  "description": "tienda online desarrollada con nodejs",
+  "category": "Proyecto",
+  "course": "Taller",
+  "img": "https://res.cloudinary.com/dcczhqfbn/image/upload/v1746979609/img/code_icon-icons.com_73620-1746979609627.png",
+  "status": true,
+  "comments": [
+    {
+      "user": "julio",
+      "comment": "Esta bien",
+      "_id": {
+        "$oid": "682121807ab5a55689315c96"
+      },
+      "date": {
+        "$date": "2025-05-11T22:15:28.191Z"
+      }
+    },
+    {
+      "user": "anonimo",
+      "comment": "le falta documentacion",
+      "_id": {
+        "$oid": "6821244c4a8176d13f4da7d7"
+      },
+      "date": {
+        "$date": "2025-05-11T22:27:24.559Z"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2025-05-11T16:06:50.436Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-11T22:27:24.566Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6820d49ebc4c08d0a4e230d9"
+  },
+  "title": "Beneficios de react",
+  "description": "infografia sobre los beneficios de react",
+  "category": "Infografia",
+  "course": "Tecnologia",
+  "img": "https://res.cloudinary.com/dcczhqfbn/image/upload/v1746982045/img/beneficios_react-1746982045906.jpg",
+  "status": true,
+  "comments": [
+    {
+      "user": "Carlos",
+      "comment": "Le falta color",
+      "_id": {
+        "$oid": "682122467ab5a55689315cd6"
+      },
+      "date": {
+        "$date": "2025-05-11T22:18:46.906Z"
+      }
+    },
+    {
+      "user": "Maestro",
+      "comment": "Le falta info",
+      "_id": {
+        "$oid": "682123fd7ab5a55689315d39"
+      },
+      "date": {
+        "$date": "2025-05-11T22:26:05.330Z"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2025-05-11T16:47:26.700Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-11T22:26:05.332Z"
+  }
+}]
