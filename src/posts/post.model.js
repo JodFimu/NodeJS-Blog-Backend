@@ -16,8 +16,8 @@ const postSchema = new Schema({
     },
     course: {
         type: String,
-        required: [ True ],
-        enum: ["Tecnología", "Practicas", "Taller" ]
+        required: true,
+        enum: ["Tecnología", "Practica Supervisada", "Taller" ]
     },
     comments: [{
         user: {
@@ -34,6 +34,10 @@ const postSchema = new Schema({
             default: Date.now
         }
     }],
+    img: {
+        type: String,
+        required: true,
+    },
     status:{
         type: Boolean,
         default: true

@@ -15,13 +15,18 @@ export const getPosts = async (req, res) => {
 
 export const post = async (req, res) => {
     try {
-        const { title, description, course, category } = req.body;
+        let Img = req.img;
 
-        const savedPost = await post.save({
+        let { title, description, course, category, img } = req.body;
+
+        img = Img 
+
+        const savedPost = await Post.create({
             title,
             description,
             category,
-            course
+            course,
+            img
         });
 
         res.status(201).json({
@@ -40,6 +45,15 @@ export const updatePost = async (req, res) => {
     const { id } = req.params;
     const data = req.body;
     try {
+        if (!req.img) {
+            return res.status(400).json({
+                success: false,
+                message: "No se recibió ninguna imagen"
+            });
+        }
+
+        data.img = req.img;
+
         const updatedPost = await Post.findByIdAndUpdate(id, data, { new: true });
         if (!updatedPost) {
             return res.status(404).json({ message: 'Post not found' });
@@ -65,6 +79,7 @@ export const commentpost = async (req, res) => {
 
         const post = await Post.findById(id);
 
+        console.log(post);
         if (!post) {
             return res.status(404).json({ message: 'Post not found' });
         }
@@ -72,6 +87,11 @@ export const commentpost = async (req, res) => {
         post.comments.push({ user, comment });
 
         await post.save();
+        res.status(200).json({
+            success: true,
+            message: 'Comment added successfully',
+            post
+        });
     } catch (error) {
         res.status(500).json({ 
             success: false,
