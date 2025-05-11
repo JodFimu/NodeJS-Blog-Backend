@@ -17,7 +17,7 @@ const postSchema = new Schema({
     course: {
         type: String,
         required: true,
-        enum: ["Tecnología", "Practica Supervisada", "Taller" ]
+        enum: ["Tecnologia", "Practica Supervisada", "Taller" ]
     },
     comments: [{
         user: {
