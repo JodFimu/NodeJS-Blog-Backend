@@ -104,11 +104,30 @@ export const getByCourse = async (req, res) => {
     try {
         const { course } = req.params;
         const posts = await Post.find({ course });
-        console.log(posts);
         res.status(200).json({
             success: true,
             posts: posts,
             message: 'Posts retrieved successfully'
+        });
+    } catch (error) {
+        res.status(500).json({ 
+            success: false,
+            message: error.message 
+        });
+    }
+}
+
+export const getById = async (req, res) => {
+    try {
+        const { id } = req.params;
+        const post = await Post.findById(id);
+        if (!post) {
+            return res.status(404).json({ message: 'Post not found' });
+        }
+        res.status(200).json({
+            success: true,
+            post: post,
+            message: 'Post retrieved successfully'
         });
     } catch (error) {
         res.status(500).json({ 
